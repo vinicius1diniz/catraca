@@ -2,9 +2,9 @@ name: Java CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -22,11 +22,11 @@ jobs:
       run: |
            cd src
            javac -cp . Main.java
-           javac -cp . Rh.java
+           javac -cp . ControleAcessoTeste.java
     - name: Executando no JAVA
       run: |
            cd src
-           java -cp . Rh
+           java -cp . ControleAcessoTeste
            
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Build  Docker image
@@ -37,3 +37,4 @@ jobs:
         dockerfile: dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+
