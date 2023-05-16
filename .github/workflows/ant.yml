@@ -28,6 +28,9 @@ jobs:
            cd src
            java -cp . ControleAcessoTeste
            
+    - name: Usando o Git Run Number
+      run: echo "Numero no Git:${{ github.run_number }}" 
+           
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Buildando  Docker image
       with:
