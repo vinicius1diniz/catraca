@@ -44,7 +44,7 @@ jobs:
       name: Buildando  Docker image
       with:
         image: viniciustech/catraca
-        tags: ${{ github.run_number }}, ${{ steps.gerador.outputs.version }}
+        tags: ${{ github.run_number }} #, ${{ steps.gerador.outputs.version }}
         registry: docker.io
         dockerfile: dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
