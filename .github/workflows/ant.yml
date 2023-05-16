@@ -39,7 +39,7 @@ jobs:
       run: |
           echo ${{ steps.gerador.outputs.version }}
 #         echo ${{ steps.gerador.outputs.previous-version }} 
-           
+#           
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Buildando  Docker image
       with:
